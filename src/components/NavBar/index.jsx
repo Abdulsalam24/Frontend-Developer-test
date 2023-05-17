@@ -49,7 +49,7 @@ const NavBar = () => {
       </div>
 
       {mobile ? (
-        <div className="fixed pt-24 bottom-0 right-0 left-0 top-0 bg-black nav h-screen w-full">
+        <div className="fixed pt-24 z-10 bg-black bottom-0 right-0 left-0 top-0 nav h-screen w-full md:hidden">
           <ul className="flex flex-col justify-center items-center gap-10 text-white">
             <li>Events</li>
             <li>Museum</li>
