@@ -11,15 +11,16 @@ const NavBar = () => {
     setMobile((prevState) => !prevState);
   };
 
-  useEffect(() => {
-    const scroll = () => {
-      if (window.scroll) {
-        setMobile(false);
-      }
-    };
+  if (mobile) {
+    document.body.style.position = "fixed";
+  } else {
+    document.body.style.position = "relative";
+  }
 
-    window.addEventListener("scroll", scroll);
-  }, []);
+  console.log(mobile, "mobile");
+  const handleMenuRoute = () => {
+    setMobile(false);
+  };
 
   return (
     <nav className="relative">
@@ -51,12 +52,17 @@ const NavBar = () => {
       {mobile ? (
         <div className="fixed pt-24 z-10 bg-black bottom-0 right-0 left-0 top-0 nav h-screen w-full md:hidden">
           <ul className="flex flex-col justify-center items-center gap-10 text-white">
-            <li>Events</li>
-            <li>Museum</li>
-            <li>Arts</li>
-            <li>Gallaries</li>
-            <button className="px-11 py-3">Login</button>
-            <button className="bg-white text-[#251A00] shadow-md p-3">
+            <li onClick={handleMenuRoute}>Events</li>
+            <li onClick={handleMenuRoute}>Museum</li>
+            <li onClick={handleMenuRoute}>Arts</li>
+            <li onClick={handleMenuRoute}>Gallaries</li>
+            <button onClick={handleMenuRoute} className="px-11 py-3">
+              Login
+            </button>
+            <button
+              onClick={handleMenuRoute}
+              className="bg-white text-[#251A00] shadow-md p-3"
+            >
               Explore arts
             </button>
           </ul>
