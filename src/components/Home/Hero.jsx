@@ -30,7 +30,7 @@ const Hero = () => (
         alt="heroImg"
       />
     </div>
-    <StarIcon className="absolute bottom-24 left-80" />
+    <StarIcon className="absolute bottom-[700px] w-[10%] left-[200px] md:w-full md:bottom-[100px] md:left-[-230px]" />
   </header>
 );
 

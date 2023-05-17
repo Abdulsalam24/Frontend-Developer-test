@@ -26,8 +26,8 @@ button {
 input {
   @apply outline-none;
 }
-input::placeholder{
-  color: #FBAF00;
+input::placeholder {
+  color: #fbaf00;
 }
 
 h1 {
