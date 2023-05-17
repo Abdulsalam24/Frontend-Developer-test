@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: sora;
+  src: url("./assets/font/Sora-Regular.ttf");
+}
+
+body {
+  font-family: sora;
+}
+
+body {
+  @apply bg-[#110C00];
+}
+
+nav ul li {
+  @apply hover:text-[#FBAF00] cursor-pointer;
+}
+
+button {
+  @apply cursor-pointer text-xl px-14 py-4 font-semibold rounded-bl-[30px] rounded-tr-[30px] bg-[#FBAF00] shadow-lg transition-all  hover:shadow-sm;
+}
+
+input {
+  @apply outline-none;
+}
+input::placeholder{
+  color: #FBAF00;
+}
+
+h1 {
+  @apply text-[48px] font-bold text-white md:text-[68px];
+}
+
+h3 {
+  @apply text-[34px] font-bold text-white md:text-[48px];
+}
+
+h2 {
+  @apply text-[25px] font-extrabold text-white md:text-[32px];
+}
+p {
+  @apply text-white text-[18px] md:text-[20px];
+}
